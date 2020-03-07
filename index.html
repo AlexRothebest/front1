@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+
+	<title>Калькулятор видеонаблюдения </title>
+	<meta name="DESCRIPTION" content="Калькулятор для расчета видеонаблюдения. Подбор оборудования и монтажных работ.">
+	<meta name="KEYWORDS" content="Продажа и обслуживание систем безопасности">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="https://texno-proekt.ru/templates/texno2015/new/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="https://texno-proekt.ru/templates/texno2015/new/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://texno-proekt.ru/templates/texno2015/new/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://texno-proekt.ru/templates/texno2015/new/img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
+	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }body.pace-done{overflow:auto}.pace-wall{background:#fff;position:fixed;top:0;left:0;right:0;bottom:0;z-index:-1;opacity:0;-webkit-transition:all 0.5s ease;-moz-transition:all 0.5s ease;-o-transition:all 0.5s ease;-ms-transition:all 0.5s ease;transition:all 0.5s ease}.pace-wall.visible{z-index:1000;opacity:1;-webkit-transition:none;-moz-transition:none;-o-transition:none;-ms-transition:none;transition:none}</style>
+	
+    <script src="https://texno-proekt.ru/libs/pace-master/pace.js"></script>
+	<link href="https://texno-proekt.ru/libs/pace-master/themes/pace-theme-center-simple.css" rel="stylesheet" />
+	<script>
+		paceOptions={elements:false,restartOnRequestAfter:false};
+		Pace.on('hide',function(){$('.pace-wall').removeClass('visible');});
+	</script>
+
+<style type="text/css">
+.quiz-step__input-block > .noUi-horizontal ~ * {
+    /*display: none;*/
+}
+
+#mm-blocker ~ * {
+    display: none;
+}
+
+span.im-caret {
+    -webkit-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        border-right-color: black;
+    }
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+@-webkit-keyframes blink {
+    from, to {
+        border-right-color: black;
+    }
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+span.im-static {
+    color: grey;
+}
+
+div.im-colormask {
+    display: inline-block;
+    border-style: inset;
+    border-width: 2px;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+div.im-colormask > input {
+    position: absolute;
+    display: inline-block;
+    background-color: transparent;
+    color: transparent;
+    -webkit-appearance: caret;
+    -moz-appearance: caret;
+    appearance: caret;
+    border-style: none;
+    left: 0; /*calculated*/
+}
+
+div.im-colormask > input:focus {
+    outline: none;
+}
+
+div.im-colormask > div {
+    color: black;
+    display: inline-block;
+    width: 100px; /*calculated*/
+}
+</style>
+</head>
+<body class="" style="--envybox-btn-background-color:rgba(240,17,1,0.8);">
+	<section class="content">
+		<div class="container">
+			<div class="item-content">
+				<div class="clearfix">
+				    <div class="col-md-12" id="service_quiz">				
+				        <div id="get-cost-wn" class="wn-calc quiz-container" style="display: block;">
+
+
+        <div class="wn-content">
+            <div class="quiz-steps">
+				<div class="wn-content__questions">
+					<div class="wn-content__questions-info">Ответьте на несколько простых вопросов. Это займет у вас не больше 1 минуты.</div>
+					<div class="wn-content__questions-title">
+							Выберите тип видеонаблюдения 
+						</div>
+					<div class="wn-content__questions-progress">
+						<div class="wn-content__questions-progress-title">
+							Готово: <span>0%</span>
+						</div>
+						<div class="progress"><span style="width: 0%;"></span></div>
+					</div>
+					<div class="quiz-step step0" style="">
+						<div class="quiz-step__question">
+							Выберите тип видеонаблюдения 
+						</div>
+						<div class="quiz-step__sel clearfix">
+							<div class="quiz-step__sel-item">
+								<div class="quiz-step__sel-item-content no-selected">
+									<label>
+										<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/quiz_0_7.jpg" alt="">
+										<div class="quiz-step__sel-item-title">
+											Для дома/дачи
+										</div>
+										<div class="quiz-step__sel-item-input">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-0" value="7">
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__sel-item">
+								<div class="quiz-step__sel-item-content selected">
+									<label>
+										<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/quiz_0_0.jpg" alt="">
+										<div class="quiz-step__sel-item-title">
+											Для квартиры
+										</div>
+										<div class="quiz-step__sel-item-input">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-0" value="0">
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__sel-item">
+								<div class="quiz-step__sel-item-content no-selected">
+									<label>
+										<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/quiz_0_3.jpg" alt="">
+										<div class="quiz-step__sel-item-title">
+											Для магазина
+										</div>
+										<div class="quiz-step__sel-item-input">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-0" value="3">
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__sel-item">
+								<div class="quiz-step__sel-item-content no-selected">
+									<label>
+										<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/quiz_0_1.jpg" alt="">
+										<div class="quiz-step__sel-item-title">
+											Для подъезда
+										</div>
+										<div class="quiz-step__sel-item-input">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-0" value="1">
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__sel-item">
+								<div class="quiz-step__sel-item-content no-selected">
+									<label>
+										<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/quiz_0_4.jpg" alt="">
+										<div class="quiz-step__sel-item-title">
+											Для офиса
+										</div>
+										<div class="quiz-step__sel-item-input">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-0" value="4">
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__sel-item">
+								<div class="quiz-step__sel-item-content no-selected">
+									<label>
+										<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/quiz_0_6.jpg" alt="">
+										<div class="quiz-step__sel-item-title">
+											Для склада
+										</div>
+										<div class="quiz-step__sel-item-input">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-0" value="6">
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__sel-item">
+								<div class="quiz-step__sel-item-content no-selected">
+									<label>
+										<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/quiz_0_9.jpg" alt="">
+										<div class="quiz-step__sel-item-title">
+											Для ресторана/кафе
+										</div>
+										<div class="quiz-step__sel-item-input">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-0" value="9">
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__sel-item">
+								<div class="quiz-step__sel-item-content no-selected">
+									<label>
+										<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/quiz_0_5.jpg" alt="">
+										<div class="quiz-step__sel-item-title">
+											Для аптеки
+										</div>
+										<div class="quiz-step__sel-item-input">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-0" value="5">
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__sel-item">
+								<div class="quiz-step__sel-item-content no-selected">
+									<label>
+										<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/quiz_0_2.jpg" alt="">
+										<div class="quiz-step__sel-item-title">
+											Для автомойки
+										</div>
+										<div class="quiz-step__sel-item-input">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-0" value="2">
+										</div>
+									</label>
+								</div>
+							</div>
+							
+														
+							<div class="quiz-step__sel-item">
+								<div class="quiz-step__sel-item-content no-selected">
+									<label>
+										<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/quiz_0_8.jpg" alt="">
+										<div class="quiz-step__sel-item-title">
+											Другое
+										</div>
+										<div class="quiz-step__sel-item-input">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-0" value="8">
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+						
+						<div class="quiz-step__sel_other_0" style="display: none;">
+							<div></div>
+						</div>
+					</div>
+					<div class="quiz-step step1" style="display: none;">
+						<div class="quiz-step__question">
+							Какая система видеонаблюдения Вас интересует?
+						</div>
+						<div class="quiz-step__sel clearfix">
+							<div class="quiz-step__sel-item item-size2">
+								<div class="quiz-step__sel-item-content">
+									<label>
+										<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/quiz_1_0.png" alt="">
+										<div class="quiz-step__sel-item-title">
+											Проводная
+										</div>
+										<div class="quiz-step__sel-item-input">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-1" value="0">
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__sel-item item-size2">
+								<div class="quiz-step__sel-item-content">
+									<label>
+										<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/quiz_1_1.png" alt="">
+										<div class="quiz-step__sel-item-title">
+											Беспроводная
+										</div>
+										<div class="quiz-step__sel-item-input">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-1" value="1">
+										</div>
+									</label>
+								</div>
+							</div>
+                            <div class="quiz-step__sel-item item-size2">
+								<div class="quiz-step__sel-item-content">
+									<label>
+										<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/quiz_1_2.png" alt />
+										<div class="quiz-step__sel-item-title">
+											Нужна консультация
+										</div>
+										<div class="quiz-step__sel-item-input">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-1" value="2" />
+										</div>
+									</label>
+								</div>
+							</div>
+ 						</div>
+					</div>
+					<div class="quiz-step step2" style="display: none;">
+						<div class="quiz-step__question">
+							Cколько Вам понадобиться камер видеонаблюдения?
+						</div>
+						<div class="clearfix">
+							Вам нужно указать количество камер для нужных Вам зон
+							<div class="quiz-step__count-cameras-zone cameras-zone-0" data-type="0">
+								<div class="row">
+							<div class="col-md-6 col-sm-12">
+								<div class="quiz-step__input-block">
+									<div class="input-title"><span class="name-cam">Камера внутри квартиры, шт:</span>
+										<div class="cl-tooltip tooltipstered">
+											<div class="tooltip__info">&nbsp;</div>
+											
+										</div>
+									</div>
+									
+									<input type="text" class="quiz_input" id="inp__quiz_2_0_0" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_0_0"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-12">
+								<div class="quiz-step__input-block">
+									<div class="input-title"><span class="name-cam">Камера перед дверью, шт:</span>
+										<div class="cl-tooltip tooltipstered">
+											<div class="tooltip__info">&nbsp;</div>
+											
+										</div>
+									</div>
+									<input type="text" class="quiz_input" id="inp__quiz_2_0_1" min="0" value="0" readonly="">
+                                    <div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_0_1">
+                                        <div class="noUi-base">
+                                            <div class="noUi-connect" style="left: 0%; right: 100%;">
+                                                
+                                            </div>
+                                            <div class="noUi-origin" style="left: 0%;">
+                                                <div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+								</div>
+							</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на этаже, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+													<div class="tooltip__info">&nbsp;</div>
+													
+												</div>
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_0_2" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_0_2"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="quiz-step__count-cameras-zone cameras-zone-1" data-type="1" style="display: none;">
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на этажах, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+													<div class="tooltip__info">&nbsp;</div>
+													
+												</div>
+											</div>	
+											<input type="text" class="quiz_input" id="inp__quiz_2_1_0" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_1_0"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера перед входной группой, шт:</span>
+											    <div class="cl-tooltip tooltipstered">
+													<div class="tooltip__info">&nbsp;</div>
+													
+												</div>
+											</div>	
+											<input type="text" class="quiz_input" id="inp__quiz_2_1_1" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_1_1"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера в лифтах, шт:</span>
+											    <div class="cl-tooltip tooltipstered">
+													<div class="tooltip__info">&nbsp;</div>
+													
+												</div>
+											</div>	
+											<input type="text" class="quiz_input" id="inp__quiz_2_1_2" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_1_2"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера во дворе, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+													<div class="tooltip__info">&nbsp;</div>
+													
+												</div>
+											</div>	
+											<input type="text" class="quiz_input" id="inp__quiz_2_1_3" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_1_3"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на парковке, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+													<div class="tooltip__info">&nbsp;</div>
+													
+												</div>
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_1_4" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_1_4"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="quiz-step__count-cameras-zone cameras-zone-2" data-type="2">
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера в подсобное помещение, шт:</span></div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_2_0" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_2_0"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+                  
+                  <div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на ресепшн/зал ожидания, шт:</span></div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_2_1" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_2_1"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на улицу, шт:</span></div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_2_2" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_2_2"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+                  
+                  <div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера в бокс, шт:</span></div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_2_3" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_2_3"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							<div class="quiz-step__count-cameras-zone cameras-zone-3" data-type="3" style="display: none;" readonly="">
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера в зал, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+													<div class="tooltip__info">&nbsp;</div>
+													
+												</div>
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_3_0" min="0" value="0"><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_3_0"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на кассу, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+													<div class="tooltip__info">&nbsp;</div>
+													
+												</div>
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_3_1" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_3_1"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на склад, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+													<div class="tooltip__info">&nbsp;</div>
+													
+												</div>
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_3_2" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_3_2"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на улицу, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>	
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_3_3" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_3_3"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="quiz-step__count-cameras-zone cameras-zone-4" data-type="4" style="display: none;">
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера в кабинет, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>	
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_4_0" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_4_0"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на ресепшен, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>	
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_4_1" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_4_1"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера в переговорную, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_4_2" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_4_2"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на улицу, шт:</span>
+											<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>	
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_4_3" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_4_3"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="quiz-step__count-cameras-zone cameras-zone-5" data-type="5" style="display: none;">
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера в зал, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>	
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_5_0" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_5_0"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на кассу, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>	
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_5_1" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_5_1"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на склад, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>	
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_5_2" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_5_2"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на улицу, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>	
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_5_3" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_5_3"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="quiz-step__count-cameras-zone cameras-zone-6" data-type="6" style="display: none;">
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на склад, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>	
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_6_0" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_6_0"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера в зону погрузки/разгрузки, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>	
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_6_1" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_6_1"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера в подсобное помещение, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>	
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_6_2" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_6_2"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера в административный блок, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_6_3" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_6_3"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="quiz-step__count-cameras-zone cameras-zone-7" data-type="7" style="display: none;">
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера по периметру дома, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>	
+											</div>
+											
+											<input type="text" class="quiz_input" id="inp__quiz_2_7_0" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_7_0"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера по периметру участка, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>	
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_7_1" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_7_1"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера внутри дома, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_7_2" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_7_2"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							<div class="quiz-step__count-cameras-zone cameras-zone-8" data-type="8">
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Внутреняя камера, шт:</span></div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_8_0" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_8_0"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Наружная камера, шт:</span></div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_8_1" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_8_1"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Анивандальная камера, шт:</span></div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_8_2" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_8_2"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							<div class="quiz-step__count-cameras-zone cameras-zone-9" data-type="9" style="display: none;">
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера в зал, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>	
+											</div>
+											
+											<input type="text" class="quiz_input" id="inp__quiz_2_9_0" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_9_0"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на ресепшен, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>	
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_9_1" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_9_1"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на кухню, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_9_2" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_9_2"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на склад, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_9_3" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_9_3"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-sm-12">
+										<div class="quiz-step__input-block">
+											<div class="input-title"><span class="name-cam">Камера на улицу, шт:</span>
+												<div class="cl-tooltip tooltipstered">
+												<div class="tooltip__info">&nbsp;</div>
+													
+												</div>
+											</div>
+											<input type="text" class="quiz_input" id="inp__quiz_2_9_4" min="0" value="0" readonly=""><div class="noUi-target noUi-ltr noUi-horizontal" id="spinner__quiz_2_9_4"><div class="noUi-base"><div class="noUi-connect" style="left: 0%; right: 100%;"></div><div class="noUi-origin" style="left: 0%;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="100.0" aria-valuenow="0.0" aria-valuetext="0.00" style="z-index: 4;"></div></div></div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+						</div>
+						
+						
+					<div class="quiz-step__input-block quiz__other_2" style="display: none;">
+							<div class="input-title">Укажите где требуется установить камеры и в каком количестве:</div>
+							<input type="text" class="quiz_input quiz-step-check-input quiz-step-inp-other" id="inp__quiz_2_other" value="">
+						</div>
+					
+					</div>
+					<div class="quiz-step step3" style="display: none;">
+						<div class="quiz-step__question">
+							Где находится объект:
+						</div>
+						<div class="quiz-step__sel clearfix">
+							<div class="quiz-step__sel-item item-size2">
+								<div class="quiz-step__sel-item-content">
+									<label>
+										<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/quiz_3_0.png" alt="">
+										<div class="quiz-step__sel-item-title">
+											В пределах МКАД
+										</div>
+										<div class="quiz-step__sel-item-input">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-3" value="0">
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__sel-item item-size2">
+								<div class="quiz-step__sel-item-content">
+									<label>
+										<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/quiz_3_1.png" alt="">
+										<div class="quiz-step__sel-item-title">
+											До 20 км от МКАД
+										</div>
+										<div class="quiz-step__sel-item-input">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-3" value="1">
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__sel-item item-size2">
+								<div class="quiz-step__sel-item-content">
+									<label>
+										<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/quiz_3_1.png" alt="">
+										<div class="quiz-step__sel-item-title">
+											Более 20 км от МКАД
+										</div>
+										<div class="quiz-step__sel-item-input">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-3" value="2">
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="quiz-step__input-block">
+							<div class="input-title">Укажите расстояние от МКАД или точный адрес объекта:</div>
+							<input type="text" class="quiz_input quiz-step-check-input" id="inp__quiz_3_0_0" value="">
+							<br>
+						</div>
+						
+							
+					</div>
+					
+					<div class="quiz-step step4" style="display: none;">
+						<div class="quiz-step__question">
+							Сколько хранить запись с камер:
+						</div>
+						<div class="clearfix">
+							<div class="quiz-step__input-block">
+								<div class="quiz-step__sel-item-hor-wrap">
+									<label>
+										<div class="quiz-step__sel-item-hor">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-4" value="0"> <span>5 дней</span>
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__input-block">
+								<div class="quiz-step__sel-item-hor-wrap">
+									<label>
+										<div class="quiz-step__sel-item-hor">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-4" value="1"> <span>10 дней</span>
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__input-block">
+								<div class="quiz-step__sel-item-hor-wrap">
+									<label>
+										<div class="quiz-step__sel-item-hor">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-4" value="2"> <span>20 дней</span>
+										</div>
+									</label>
+								</div>
+							</div>
+	
+						</div>
+						
+						<div class="quiz-step__input-block quiz__other_4" style="display: none;">
+							<div class="input-title">Укажите сколько дней хранить архив:</div>
+							<input type="text" class="quiz_input quiz-step-check-input quiz-step-inp-other" id="inp__quiz_4_0_0" value="">
+						</div>
+						
+							
+					</div>
+					
+					<div class="quiz-step step5" style="display: none;">
+						<div class="quiz-step__question">
+							Какие дополнительные пожелания к системе видеонаблюдения?
+						</div>
+						<div class="clearfix">
+							<div class="quiz-step__input-block">
+								<label><input type="checkbox" class="quiz-step__check" id="quiz_step__check_5_0" data-step="5"> <span>Запись звука</span></label>
+								<div class="quiz-step__input-block quiz__5_count_mic" style="display: none;">
+									<div class="input-title">Укажите количество микрофонов, которое Вам требуется:</div>
+									<input type="number" class="quiz_input quiz-step-check-input quiz-step-inp-other" id="inp__quiz_5_count_mic" value="1" step="1" min="1">
+								</div>
+							</div>
+							<div class="quiz-step__input-block">
+								<label><input type="checkbox" class="quiz-step__check" id="quiz_step__check_5_1" data-step="5"> <span>Доступ удалено со смартфона либо планшета</span></label>
+							</div>
+							<div class="quiz-step__input-block">
+								<label><input type="checkbox" class="quiz-step__check" id="quiz_step__check_5_2" data-step="5"> <span>Просмотр на мониторе/телевизоре</span></label>
+							</div>
+							
+							
+							
+						</div>
+					</div>
+					
+					<div class="quiz-step step6" style="display: none;">
+						<div class="quiz-step__question">
+							Как срочно Вам нужна система?
+						</div>
+						<div class="clearfix">
+							<div class="quiz-step__input-block">
+								<div class="quiz-step__sel-item-hor-wrap">
+									<label>
+										<div class="quiz-step__sel-item-hor">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-6" value="0"> <span>Как можно быстрее</span>
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__input-block">
+								<div class="quiz-step__sel-item-hor-wrap">
+									<label>
+										<div class="quiz-step__sel-item-hor">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-6" value="1"> <span>В ближайшую неделю</span>
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__input-block">
+								<div class="quiz-step__sel-item-hor-wrap">
+									<label>
+										<div class="quiz-step__sel-item-hor">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-6" value="2"> <span>Не горит, просто проверяю цены</span>
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__input-block">
+								<div class="quiz-step__sel-item-hor-wrap">
+									<label>
+										<div class="quiz-step__sel-item-hor">
+											<input type="radio" class="quiz-step__radio" data-type="other" name="radio-quiz-step-6" value="3"> <span>Свой вариант</span>
+										</div>
+									</label>
+								</div>
+							</div>
+							
+						</div>	
+						
+						<div class="quiz-step__input-block quiz__other_6" style="display: none;">
+							<div class="input-title">Укажите свой вариант:</div>
+							<input type="text" class="quiz_input quiz-step-check-input quiz-step-inp-other" id="inp__quiz_6_0_0" value="">
+						</div>
+							
+					</div>
+						
+					<div class="quiz-step step7" style="display: none;">
+						<div class="quiz-step__question">
+							Eсть на объекте интернет?
+						</div>
+						<div class="clearfix">
+							<div class="quiz-step__input-block">
+								<div class="quiz-step__sel-item-hor-wrap">
+									<label>
+										<div class="quiz-step__sel-item-hor">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-7" value="0"> <span>Да</span>
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__input-block">
+								<div class="quiz-step__sel-item-hor-wrap">
+									<label>
+										<div class="quiz-step__sel-item-hor">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-7" value="1"> <span>Нет, нужно установить</span>
+										</div>
+									</label>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+					<div class="quiz-step step8" style="display: none;">
+						<div class="quiz-step__question">
+							Вам важнее цена или качество?
+						</div>
+						<div class="clearfix">
+							<div class="quiz-step__input-block">
+								<div class="quiz-step__sel-item-hor-wrap">
+									<label>
+										<div class="quiz-step__sel-item-hor">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-8" value="0"> <span>Важнее сделать как можно дешевле</span>
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__input-block">
+								<div class="quiz-step__sel-item-hor-wrap">
+									<label>
+										<div class="quiz-step__sel-item-hor">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-8" value="1"> <span>Нужно сделать хорошо</span>
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__input-block">
+								<div class="quiz-step__sel-item-hor-wrap">
+									<label>
+										<div class="quiz-step__sel-item-hor">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-8" value="2"> <span>Качество важнее, чем цена</span>
+										</div>
+									</label>
+								</div>
+							</div>
+
+						</div>
+						
+						<div class="quiz-step__input-block quiz__other_8" style="display: none;">
+							<div class="input-title">Укажите Ваш бюджет:</div>
+							<input type="text" class="quiz_input quiz-step-check-input quiz-step-inp-other" id="inp__quiz_8_0_0" value="">
+						</div>
+						
+							
+					</div>
+
+					<div class="quiz-step step9" style="display: none;">
+						<div class="quiz-step__question">
+							Вам нужен готовый комплект или монтаж под ключ?
+						</div>
+						<div class="clearfix">
+							<div class="quiz-step__input-block">
+								<div class="quiz-step__sel-item-hor-wrap">
+									<label>
+										<div class="quiz-step__sel-item-hor">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-9" value="1" id="calc_install_radio" checked=""><span>Нужна установка</span>
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="quiz-step__input-block">
+								<div class="quiz-step__sel-item-hor-wrap">
+									<label>
+										<div class="quiz-step__sel-item-hor">
+											<input type="radio" class="quiz-step__radio" name="radio-quiz-step-9" value="0"> <span>Установлю самостоятельно</span>
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+ 					
+					<div class="quiz-nav quiz-step-nav">
+						<span class="button quiz-nav__next " style="">Далее</span>
+						<span class="button quiz-nav__prev " style="display: none;">Назад</span>
+					</div>
+				</div>
+                
+				<div class="wn-content__sidebar">
+          <div class="quiz-sidebar__sel">
+            <input type="radio" name="quiz-sideba-radio" value="0" id="quiz-sideba-radio__0" checked="checked"> <label for="quiz-sideba-radio__0">Смета</label>&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="quiz-sideba-radio" value="1" id="quiz-sideba-radio__1"> <label for="quiz-sideba-radio__1">Комментарии</label>
+          </div>
+          <div class="quiz-sidebar sb0" style="display: none;">
+            <div class="quiz-smeta__title">Ваш выбор:</div>
+            <div class="quiz-smeta__content"><div class="quiz-smeta__content-line solution"></div></div>
+          </div>
+          <div class="quiz-sidebar sb1" style="">
+					<div class="quiz-info clearfix">
+						<div class="quiz-info__img">
+							<img src="https://texno-proekt.ru/templates/texno2015/new/img/service/consultant-texnoproekt.png" alt="">
+						</div>
+						<div class="quiz-info__title">
+							<div class="quiz-info__name">Ирина</div>
+							<div class="quiz-info__spec">Специалист по видеонаблюдению</div>
+						</div>
+						<div class="quiz-info__arrow"><span>&nbsp;</span></div>
+					</div>
+					<div class="quiz-step step0" style="">
+						<p class="sub-step" style="display: none;">Компания ООО «Техно-Проект» успешно работает на рынке услуг комплексной безопасности с 2004 года. Мы предлагаем обслуживание объектов жилого, гражданского, промышленного назначения, решаем задачи безопасности любого уровня сложности. Профессионализм, конфиденциальность, ответственность, точность, индивидуальный подход – основные принципы нашей работы.</p>
+						<div class="sub-step sp0" style=""><div class="sp-title">Для квартиры</div>Камеры для квартиры имеют стильный дизайн и могут быть установлены в каждой комнате, где необходимо наблюдение. Видеокамеры обеспечивают изображение даже в полной темноте, а также имеют встроенный микрофон для аудиоконтроля. Основное назначение камер — это наблюдение за престарелыми членами семьи, детьми или няней.
+						В квартире мы рекомендуем устанавливать беспроводные камеры.
+						<div class="video-wrap"><iframe class="video" src="https://www.youtube.com/embed/L0ZAJgCm5Oo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div></div>
+						<div class="sub-step sp1" style="display: none;"><div class="sp-title">Для подъезда</div>Камера видеонаблюдения для подъезда обеспечивает высокое качество изображения как днем, так и ночью. Видеокамера позволяет наблюдать за происходящим на лестничной площадке или рассмотреть того, кто стоит за дверью. Для видеонаблюдения в подъезде мы рекомендуем подбирать проводной комплект.</div>
+						<div class="sub-step sp2" style="display: none;"><div class="sp-title">Для автомойки</div>Система видеонаблюдения для автомойки будет находиться в условиях повышенной влажности и подвергнется воздействию других вредоносных факторов. Учитывая это, необходимо выбрать камеру с защитой IP 66. Такое устройство не выйдет из строя при попадании воды, снега или длительном пребывании на холоде. При необходимости дополнительной защиты можно воспользоваться антивандальной камерой.</div>
+						<div class="sub-step sp3" style="display: none;"><div class="sp-title">Для магизина</div>С помощью видеонаблюдения для магазина можно контролировать действия сотрудников и покупателей. В случае кражи товара записи с камер могут помочь найти злоумышленника и увидеть подробную картину событий. Благодаря инфракрасной подсветке камера обеспечивает четкое изображение даже в темное время суток.</div>
+						<div class="sub-step sp4" style="display: none;"><div class="sp-title">Для офиса</div>Камеры для офиса имеют продуманный современный дизайн и могут быть установлены в каждом помещении, где необходимо видеонаблюдение. Видеокамеры имеют встроенный микрофон для аудиоконтроля. Основное их назначение — это слежение за перемещением сотрудников офиса и качеством исполнения рабочих обязанностей. В офисе мы рекомендуем устанавливать беспроводные камеры.<div class="video-wrap"><iframe class="video" src="https://www.youtube.com/embed/opEhD7sHLJI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div></div>
+						<div class="sub-step sp5" style="display: none;"><div class="sp-title">Для аптеки</div>Видеонаблюдение, установленное в аптеке, позволяет контролировать действия сотрудников и посетителей. В случае возникновения спора запись с камеры обеспечит картину происходящего и поможет разрешить конфликт. Для этого рядом с зоной кассы желательно установить оборудование с качеством изображения FullHD.</div>
+						<div class="sub-step sp6" style="display: none;"><div class="sp-title">Для склада</div>Для слежения за складским помещением используется как проводное, так и беспроводное видеонаблюдение. С его помощью можно осуществлять контроль за работой сотрудников, соблюдением техники безопасности и проведением погрузочно-разгрузочных работ. В складских зонах, требующих повышенного внимания, целесообразно установить поворотную камеру с высоким разрешением.</div>
+						<div class="sub-step sp7" style="display: none;"><div class="sp-title">Для дома/дачи</div>Система видеонаблюдения для дачи или дома состоит из уличных камер, которые обладают высокой степенью защиты от внешних воздействий (дождя, пыли и низких температур). А благодаря инфракрасной подсветке камеры обеспечивает четкое изображение даже в темное время суток. Для дома и дачи мы рекомендуем приобретать проводной комплект.</div>
+						<div class="sub-step sp8" style="display: none;"><div class="sp-title">Другое</div>Камеры могут понадобиться для видеонаблюдения за лесопарковой зоной, стадионом, зоопарком или других объектов. Мы рекомендуем выбирать устройства, устойчивые к воздействию неблагоприятных погодных условий, и оборудование с защитой от вандализма. Видеонаблюдение для внутренней установки в гараже, заводе, школе или больнице может осуществлять простая камера, не оснащенная дополнительной защитой.</div>
+						<div class="sub-step sp9" style="display: none;"><div class="sp-title">Для ресторана/кафе</div>Система видеонаблюдения для ресторана или кафе позволяет следить за работой персонала, соблюдением дресс-кода, поведением посетителей. Камера, установленная в кассовой зоне, может разрешить спорную ситуацию, предотвратить или раскрыть мошенничество сотрудников и обеспечить улики в случае кражи. Для осуществления видеоконтроля в самом кафе подойдет поворотная камера, для слежения за прилегающей территорией — наружное  видеонаблюдение с защитой от влаги, холода и пыли.</div>
+					</div>
+					<div class="quiz-step step1" style="display: none;">
+						<p class="sub-step">Eсли готов ремонт и нет возможности в прокладке проводов, Вам необходима беспроводная система, если у Вас большая площадь и большое количество камер, лучше остановиться на проводном варианте.</p>
+						<div class="sub-step sp0" style="display: none;"><div class="sp-title">Проводная</div><div style="text-align: center;"><img style="max-width: 70%;" src="https://texno-proekt.ru/templates/texno2015/new/img/solutions/solution_outdoor_slide_cameras_ethernet.png" alt=""></div><p>Проводная система видеонаблюдения для, дома или бизнеса на базе камер HDTVI (новый стандарт аналогового видеонаблюдения). Преимуществом этого оборудования является стабильная работа, независимо от покрытия Wi-Fi.</p><span class="sp-more">Подробнее...</span><div class="sp-more__cont" style="display: none;"><p>Ядром системы является видеорегистратор, к которому подключаются камеры с помощью проводов. Он отвечает за получение изображения, доступ к видео с мобильных устройств в режиме онлайн, а также к архиву с данными. Кроме того, регистратор подключают к телевизору или монитору для постоянного отображения изображений со всех камер.</p><span class="sp-hide">Свернуть</span></div></div>
+						<div class="sub-step sp1" style="display: none;"><div class="sp-title">Беспроводная</div><div style="text-align: center;"><img style="max-width: 70%;" src="https://texno-proekt.ru/templates/texno2015/new/img/solutions/solution_outdoor_slide_cameras_wifi.png" alt=""></div><p>Wi-Fi камеры видеонаблюдения  для, дома или бизнеса – это современное  устройство, которое может заменить целую систему безопасности не только по цене, но и по функционалу.</p><span class="sp-more">Подробнее...</span><div class="sp-more__cont" style="display: none;"><p>Современные камеры имеют слот для установки карт памяти, встроенный микрофон, поворотный механизм, мощную ИК подсветку  а также техническому оснащению. А еще они имеют привлекательный, стильный дизайн и станут украшением любого интерьера.</p> <span class="sp-hide">Свернуть</span> </div></div>
+						
+						<div class="sub-step sp2" style="display: none;"><div class="sp-title">Не знаю, нужна консультация</div>Выберите данный варинат, если не знаете какая система Вам подойдет. Мы предложим наиболее подходящий вариант.</div>
+					</div>
+					<div class="quiz-step step2" style="display: none;">
+						<p class="sub-step" style="display: none;">Если Вы сомневаетесь в необходимом количестве камер, напишите нам - мы Вам обязательно поможем!</p>
+						<div class="sub-step sp0" style=""><div class="sp-title">Камера внутри квартиры</div>Для внутренней съемки маленькой комнаты подойдет беспроводное видеонаблюдение с углом обзора от 92 до 103°. Для охвата большей территории можно использовать поворотную Wi-Fi-камеру с ночной съемкой до 10 метров. Если видеонаблюдение нужно обеспечить в каждом помещении, целесообразно установить проводную систему с камерой в каждой комнате.</div>
+						<div class="sub-step sp1" style="display: none;"><div class="sp-title">Камера в подъезд</div>Как правило, видеонаблюдение, устанавливаемое перед дверью в квартиру, охватывает небольшой участок в пределах лестничной площадки и пролета. Для этого достаточно одной камеры, обеспечивающего обзор 85—112° и ночную съемку до 30 метров. Чтобы детально рассмотреть лицо человека у двери, лучше установить видеокамеру с качеством изображения не ниже FullHD.<p>Для слежения за складским помещением используется как проводное, так и беспроводное видеонаблюдение. С его помощью можно осуществлять контроль за работой сотрудников, соблюдением техники безопасности и проведением погрузочно-разгрузочных работ. В складских зонах, требующих повышенного внимания, целесообразно установить поворотную камеру с высоким разрешением.</p></div>
+						<div class="sub-step sp2" style="display: none;"><div class="sp-title">Для автомойки</div>Видеокамеры для автомойки обеспечивают угол обзора от 85 до 112° и ночную съемку на расстояние 20 или 30 метров. Для отдельного бокса с небольшой площадью хватит одной Wi-Fi-купольной видеокамеры с ночной съемкой до 30 метров.  Если же необходимо держать под контролем всю территорию автомойки, можно установить несколько проводных камер видеонаблюдения с разрешением 720p или одну миниатюрную беспроводную камеру, обеспечивающую изображение в качестве FullHD.</div>
+						<div class="sub-step sp3" style="display: none;"><div class="sp-title">Для магизина</div>Для видеонаблюдения в магазине используются камеры с дальностью ночного видения 10—30 метров и углом обзора 92—112°. Для слежения за торговым залом можно использовать 2 или 3 поворотные Wi-Fi-видеокамеры. В кассовой зоне целесообразно установить проводное видеонаблюдение с изображением в FullHD-качестве.</div>
+						<div class="sub-step sp4" style="display: none;"><div class="sp-title">Для офиса</div>Проводные устройства для видеонаблюдения за офисом представлены камерами с углом обзора от 92 до 103° и ночной съемкой 20 метров. Беспроводная видеосистема включает модели с обзором на 106—112° и дальностью ночного видения 10—30 метров.</div>
+						<div class="sub-step sp5" style="display: none;"><div class="sp-title">Для аптеки</div>Для слежения за аптекой используются проводные камеры с углом обзора от 92 до 103° и ночной съемкой до 20 метров. Беспроводная система видеонаблюдения представлена устройствами с углом обзора 106 или 112° и ночной съемкой, рассчитанной на 10 или 30 метров. Количество камер подбирается в зависимости от площади помещения и целей установки.</div>
+						<div class="sub-step sp6" style="display: none;"><div class="sp-title">Для склада</div>Для складского помещения подойдут видеокамеры с углом обзора от 85 до 112° и ночным видением 20—30 метров. Для слежения за несколькими складами или одной большой площадкой можно использовать 4 проводные камеры, обеспечивающие разрешение 1080p и ночную съемку до 20 метров. Видеонаблюдение за небольшим складом может осуществлять одна цилиндрическая беспроводная камера с ночной съемкой до 30 метров.</div>
+						<div class="sub-step sp7" style="display: none;"><div class="sp-title">Камера для дачи/дома</div>Видеонаблюдение для частного дома или дачи представлено проводными и беспроводными камерами с углом обзора от 85 до 112° и ночной съемкой от 20 до 30 метров. Так, для контроля небольшого двора подойдет проводная камера видеонаблюдения с дальностью ночной съемки 20 метров. Несколько купольных Wi-Fi-видеокамер с разрешением 1080p и ночным видением до 30 метров смогут следить за большой территорией.</div>
+						<div class="sub-step sp8" style="display: none;"><div class="sp-title">Другое</div>Для осуществления видеонаблюдения за парком, стадионом, гаражом, заводом, больницей и другими объектами можно использовать проводное и беспроводное оборудование с углом обзора 85—112° и ночной съемкой 10—30 метров. Количество камер подбирается в зависимости от площади, типа помещения и целей установки.</div>
+						<div class="sub-step sp9" style="display: none;"><div class="sp-title">Для ресторана/кафе</div>Для видеонаблюдения в кафе или ресторане используются камеры с дальностью ночного видения 10—30 метров и углом обзора 92—112°. Для слежения за самим залом можно использовать 2 или 3 поворотные Wi-Fi-видеокамеры с разрешением 1080p. В кассовой зоне будет полезно установить проводное видеонаблюдение с изображением в FullHD-качестве.</div>
+					</div>
+					<div class="quiz-step step3" style="display: none;">
+						<p>Выезд монтажной бригады - в пределах МКАД- БЕСПЛАТНО. Если объект находится на значительном удалении, мы сразу учтем транспортные расходы в расчет.</p>
+						<div style="text-align: center;"><img style="max-width: 90%;" src="https://texno-proekt.ru/templates/texno2015/new/img/car-texno-proekt.png" alt=""></div>
+					</div>
+					<div class="quiz-step step4" style="display: none;">
+						<p class="sub-step">От срока хранения зависит стоимость системы. При ответе на вопрос исходите из Ваших реальных задач.</p>
+						<div class="sub-step sp0" style="display: none;"><div class="sp-title">5 дней</div>
+							<div class="sp-wifi-ether sp-we-0">Для хранения информации в течение 5 дней вам понадобится жесткий диск объемом 500 Гб. Мы используем винчестер Samsung, который зарекомендовал себя как надежное и стабильное устройство, подходящее для системы видеонаблюдения.</div>
+							<div class="sp-wifi-ether sp-we-1"><div style="text-align: center; padding-bottom: 10px;"><img src="https://texno-proekt.ru/templates/texno2015/new/img/solutions/flash-gift-quiz.png" style="max-width: 200px;" alt=""></div>Для хранения информации  в течение 5 дней вам понадобится SD-карта объемом 16 Гб, которая предоставляется <span style="color: #f00; font-weight: bold;">В подарок</span>.<p>Мы используем SD-карту производителя Kingston. Карта памяти 10 класса обеспечивает высокую скорость записи и подходит для видео в формате Full HD.</p></div>
+						</div>
+						<div class="sub-step sp1" style="display: none;"><div class="sp-title">10 дней</div>
+							<div class="sp-wifi-ether sp-we-0">Для хранения информации в течение 10 дней вам понадобится жесткий диск объемом 500 Гб. Мы используем винчестер Samsung, который зарекомендовал себя как надежное и стабильное  устройство, подходящее для системы видеонаблюдения.</div>
+							<div class="sp-wifi-ether sp-we-1">Для хранения информации в течение 10 дней вам понадобится SD-карта объемом 32 Гб. <p>Мы используем SD-карту производителя Kingston. Карта памяти 10 класса обеспечивает высокую скорость записи и подходит для видео в формате Full HD.</p></div>
+						</div>
+						<div class="sub-step sp2" style="display: none;"><div class="sp-title">20 дней</div>
+							<div class="sp-wifi-ether sp-we-0">Для хранения информации в течение 20 дней вам понадобится жесткий диск объемом 1000 Гб. Мы используем винчестер Samsung, который зарекомендовал себя как надежное и стабильное устройство, подходящее для системы видеонаблюдения.</div>
+							<div class="sp-wifi-ether sp-we-1">Для хранения информации в течение 20 дней вам понадобится SD-карта объемом 64 Гб.<p>Мы используем SD-карту производителя Kingston. Карта памяти 10 класса обеспечивает высокую скорость записи и подходит для видео в формате Full HD.</p></div>
+						</div>
+						<div class="sub-step sp3" style="display: none;"><div class="sp-title">Свой вариант</div>
+							В вашем случае можно сделать индивидуальный подбор устройства для хранения видеозаписи. Его объем будет зависеть от времени хранения информации и качества видео. Также можно использовать ваш HDD для хранения видеозаписей.
+						</div>
+						<div class="sub-step sp4" style="display: none;"><div class="sp-title">Консультация</div>
+							<p>Для хранения информации беспроводная система видеонаблюдения использует SD-карту. Для качественной записи видео понадобится карта памяти 10 класса. Она обеспечивает высокую скорость видеосъемки и подходит для записи видео в формате Full HD. Объем памяти устройства зависит от времени, в течение которого необходимо хранить видео. </p><p>Хранение видео в проводных камерах осуществляется на жестком диске. Требуемый объем зависит от качества видео и времени хранения записей. Необходимо использовать надежное и стабильное HDD-устройство с большим количеством циклов перезаписи.</p>
+						</div>
+					</div>
+					<div class="quiz-step step5" style="max-height: 400px; overflow: auto; display: none;">
+						<p class="">Отмечайте те опции, которые Вам действительно необходимы</p>
+						<div class="sub-step sp0" style="display: none; padding-bottom: 15px;"><div class="sp-title">Запись звука</div>Все беспроводные системы видеонаблюдения оснащены встроенным микрофоном для записи звука. Проводные камеры таким устройством не располагают, но и для них можно отдельно приобрести и установить микрофон.<br></div>
+						<div class="sub-step sp1" style="display: none;  padding-bottom: 15px;"><div class="sp-title">Удаленный доступ со смартфона или планшета</div>Наша система видеонаблюдения позволяет осуществлять контроль за происходящим в режиме реального времени. Следить за обстановкой в зоне видимости беспроводной камеры можно с помощью специального приложения. Доступ к изображению проводных камер в онлайн-режиме возможен через интернет посредством видеорегистратора.</div>
+						<div class="sub-step sp2" style="display: none;"><div class="sp-title">Просмотр на мониторе/телевизоре</div>Чтобы подключить беспроводную видеокамеру к телевизору понадобится регистратор. Трансляция записи с проводного устройства на телевизоре возможна при подключении видеорегистратора к монитору с помощью HDMI- или VGA-кабеля.</div>
+					</div>
+					<div class="quiz-step step6" style="display: none;">
+						<p>Сроки не влияют на стоимость установки видеонаблюдения, однако мы заранее сможем указать, реально ли в них вписаться</p>
+					</div>
+					<div class="quiz-step step7" style="display: none;">
+						<div class="sub-step"><div class="sp-title">Есть ли на объекте Интернет?</div><p>Для корректной работы беспроводных камер видеонаблюдения необходимо стабильное подключение к интернету по сети Wi-Fi. Через беспроводную сеть изображение с камеры передается на IP-видеосервер, благодаря чему видеозапись можно просматривать в режиме реального времени. Для качественной передачи изображения необходим интернет со скоростью не ниже 2 Мб/сек.</p><span class="sp-more">Подробнее...</span><div class="sp-more__cont" style="display: none;"><p>Проводная система видеонаблюдения не требует обязательного подключения к интернету. Тем не менее без него невозможен просмотр видеоизображения с камеры в режиме реального времени. </p><div class="sp-title" style="padding-top: 15px;">Если интернета нет, но он нужен</div><p>Наша компания также предоставляет услугу подключения к сети интернет. Даже если на вашем объекте нет доступа ко всемирной паутине, мы поможем вам выбрать оптимальный тарифный план и обеспечим доступ к интернету. При этом мастера все сделают самостоятельно, вам придется лишь подписать договор и внести необходимую плату.</p> <span class="sp-hide">Свернуть</span> </div></div>
+					</div>
+					<div class="quiz-step step8" style="display: none;">
+						<p>Самое главное в системе видеонаблюдения — это решение поставленных задач. При этом некоторые камеры отличаются по цене в несколько раз, имея схожие характеристики. Не стесняйтесь, укажите ваш бюджет — и мы подберем для вас наиболее подходящий вариант.</p>
+					</div>
+					<div class="quiz-step step9" style="display: none;">
+						<p class="sub-step">Мы можем подобрать необходимое оборудование и укомплектовать  его для самостоятельной установки под ключ. При самовывозе из нашего офиса, возможна бесплатная настройка нашими инженерами.</p>
+						<div class="sub-step sp0" style="display: none;"><div class="sp-title">Хочу купить комплект, но установлю сам</div>Наши сотрудники смогут выехать на объект, осмотреть его и подобрать оптимальный вариант для ваших нужд. Возможна доставка оборудования к вам на дом и самовывоз. Монтаж в стоимость комплекта не входит.</div>
+						<div class="sub-step sp1" style="display: none;"><div class="sp-title">Нужно подобрать комплект  и установить</div>Наши сотрудники смогут выехать на объект, осмотреть его и подобрать оптимальный вариант для ваших нужд. Мы доставим оборудование и проведем полный перечень монтажных работ. Он включает установку, настройку и тестирование системы видеонаблюдения, а также подробную консультацию по ее эксплуатации. </div>
+						<div class="sub-step sp2" style="display: none;"><div class="sp-title">Консультация</div>Мы приобретаем оборудование у надежных и проверенных производителей. Все камеры видеонаблюдения отвечают стандартам качества и безопасности, имеют соответствующие сертификаты. При заказе монтажа наши сотрудники проведут полный перечень монтажных работ. </div>
+					</div>
+			    </div>
+            </div>        </div>            
+            
+            
+<div class="quiz-results clearfix" style="display: none; ">
+				<div class="quiz-results__cont">
+					<div class="quiz-results_col1">
+						<div class="" style="text-align: center; padding: 10px 0;"><img style="width: 64px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTAgNTEwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTAgNTEwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PGcgaWQ9ImNoZWNrLWNpcmNsZS1vdXRsaW5lIj48cGF0aCBkPSJNMTUwLjQ1LDIwNi41NWwtMzUuNywzNS43TDIyOS41LDM1N2wyNTUtMjU1bC0zNS43LTM1LjdMMjI5LjUsMjg1LjZMMTUwLjQ1LDIwNi41NXogTTQ1OSwyNTVjMCwxMTIuMi05MS44LDIwNC0yMDQsMjA0ICAgIFM1MSwzNjcuMiw1MSwyNTVTMTQyLjgsNTEsMjU1LDUxYzIwLjQsMCwzOC4yNSwyLjU1LDU2LjEsNy42NWw0MC44MDEtNDAuOEMzMjEuMyw3LjY1LDI4OC4xNSwwLDI1NSwwQzExNC43NSwwLDAsMTE0Ljc1LDAsMjU1ICAgIHMxMTQuNzUsMjU1LDI1NSwyNTVzMjU1LTExNC43NSwyNTUtMjU1SDQ1OXoiIGZpbGw9IiNmZjEwMzciLz48L2c+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjwvc3ZnPg==" alt=""></div>
+						
+						<div style="font-weight: bold; font-size: 28px; text-align: center;" id="result__string"></div>
+						<div class="quiz-results_data" style="display: none;">
+							<div class="quiz-results__complect-cost"> </div>
+							<div class="quiz-results__complect-desc"> </div>
+							<div class="load-offer__wrap"><span class="button quiz-nav__next offer" style="">Скачать предложение</span></div>
+							<div style="font-weight: bold; font-size: 20px; text-align: center; padding-top: 30px;">Другие варианты комплектов:</div>
+							<div class="quiz-results__variants"> </div>
+						</div>                               
+						<div class="form-loading" id="quiz__res-loading"><img src="https://texno-proekt.ru/templates/texno2015/new/img/ajax-loader.gif" alt="loading"></div>
+					
+						
+						
+					</div>
+					<div class="quiz-results_col2">
+					   <div class="quiz-offer-preview-wrap cl-loading">
+						<img src="https://texno-proekt.ru/templates/texno2015/new/img/offer_pdf_preview.jpg" class="quiz-offer-preview" alt="Коммерческое предложение">
+					   </div>
+					   
+					   <div class="quiz-offer-preview-status">
+					   </div>
+					</div>
+				</div>
+				<div class="quiz-nav">
+					<span class="button quiz-nav__prev" style="display: none;">Назад</span>
+				</div>
+			</div>
+			
+			<div class="quiz-offer clearfix" style="display: none; ">
+					<div class="">
+						<div style="font-size: 16px; text-align: center;padding: 5px 0 0 0;">Через <span style="font-weight: bold; color: #ff1037;">1 минуту</span> мы вышлем Вам расчет.</div>
+						<div style="font-size: 16px; text-align: center;padding: 0 0 5px 0;">Мы подготовили для Вас предложение в разных ценовых категориях</div>
+						
+						<div class="form-order-div quiz_form__container" style="max-width: 600px; margin: 0 auto;">
+							<div class="order-line">
+								<label for="quiz__name_input" class="">Ваше имя <span class="red-text">*</span></label>
+								<input type="text" name="quiz__name" id="quiz__name_input">
+								
+							</div>
+							<div class="order-line">
+								<label for="quiz__phone_input" class="">Ваш телефон <span class="red-text">*</span></label>
+								<input type="text" name="quiz__phone" class="phone-inp" id="quiz__phone_input">
+								<!--div class="info">На указанный номер телефона мы отправим <span>промокод на скидку</span></div-->
+							</div>
+							<div class="order-line">
+								<label for="quiz__email_input" class="">Ваше email <span class="red-text">*</span></label>
+								<input type="text" name="quiz__email" id="quiz__email_input">
+								<!--div class="info">На указанный email мы отправим предложение с расчетом итоговой стоимости</div-->
+							</div>
+							
+							<div class="quiz_processing" style="padding-top: 15px;">
+								<input type="checkbox" id="quiz_processing_check" checked=""> <label for="quiz_processing_check">Я даю согласие на обработку моих персональных данных</label>
+							</div>
+							<div class="submit-div">                                        
+								<div class="form-loading" id="quiz__form-loading"><img src="https://texno-proekt.ru/templates/texno2015/new/img/ajax-loader.gif" alt="loading"></div>
+							</div>  
+							<div class="wn-btn-div" style="padding:30px 0 0 0;">
+								<span class="button button--ujarak quiz-btn-wn " id="get_quiz_btn">Получить предложение</span>
+							</div>
+							
+						</div>
+						<div class="form_message" id="quiz__form_message" style="display:none;"></div>
+						
+						
+					</div>
+					<div class="quiz-nav">
+						<span class="button quiz-nav__prev offer" style="display: none;">Назад</span>
+					</div>
+		        </div>
+            </div>
+        </div>
+    </div>
+				
+				
+				
+				</div>
+			</div>
+		</div>
+	</section>
+	<link rel="stylesheet" href="https://texno-proekt.ru/templates/texno2015/new/css/main.min.css">
+
+    <script type="text/javascript">
+        $(window).ready(function() {
+            $('script').ready(function() {
+                $('#quiz-sideba-radio__1').click();
+                $('.quiz-step__radio').eq(1).click();
+                $('#get-cost-wn:nth-child(2)').remove();
+            });
+
+
+            $('#mm-blocker ~ *').remove();
+
+
+            setTimeout(function() {
+                $('.quiz-step__input-block > .noUi-horizontal:nth-child(5n+3)').remove();
+                $('.quiz-step__input-block > .noUi-horizontal:nth-child(4n+3)').remove();
+                $('.quiz-step__input-block > .noUi-horizontal:nth-child(3n)').remove();
+                $('.quiz-step__input-block > .noUi-horizontal:nth-child(2n)').remove();
+            }, 3000);
+        });
+    </script>
+
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+
+    <script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script>
+
+    <script src="scripts.min.js" defer=""></script>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" defer=""></script>
+
+	<script type="text/javascript" src="https://texno-proekt.ru/calc/js/jquery.magnific-popup.min.js" defer=""></script>
+	<script type="text/javascript" src="https://texno-proekt.ru/calc/js/jquery.twbsPagination.min.js" defer=""></script>
+	<script type="text/javascript" src="https://texno-proekt.ru/calc/js/jquery.browser.js" defer=""></script>
+	<script type="text/javascript" src="https://texno-proekt.ru/calc/js/jquery.alerts.js" defer=""></script>
+	<script type="text/javascript" src="https://texno-proekt.ru/calc/js/jquery.base64.min.js" defer=""></script>
+	<script type="text/javascript" src="https://texno-proekt.ru/calc/js/portamento-min.js" defer=""></script>  
+	<script type="text/javascript" src="https://texno-proekt.ru/calc/js/jquery.selectboxit.min.js" defer=""></script>
+	<script type="text/javascript" src="calc1.js" defer=""></script>
+	<script type="text/javascript" src="https://texno-proekt.ru/calc/js/calc_hdd_script.js" defer=""></script>
+
+	
+	<script type="text/javascript">
+
+                        
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t44.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+    </script>
+
+	<script>
+			(function() {
+				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+				if (!String.prototype.trim) {
+					(function() {
+						// Make sure we trim BOM and NBSP
+						var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+						String.prototype.trim = function() {
+							return this.replace(rtrim, '');
+						};
+					})();
+				}
+
+				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+					// in case the input is already filled..
+					if( inputEl.value.trim() !== '' ) {
+						classie.add( inputEl.parentNode, 'input--filled' );
+					}
+
+					// events:
+					inputEl.addEventListener( 'focus', onInputFocus );
+					inputEl.addEventListener( 'blur', onInputBlur );
+				} );
+
+				function onInputFocus( ev ) {
+					classie.add( ev.target.parentNode, 'input--filled' );
+				}
+
+				function onInputBlur( ev ) {
+					if( ev.target.value.trim() === '' ) {
+						classie.remove( ev.target.parentNode, 'input--filled' );
+					}
+				}
+			})();
+	</script>
+	
+
+ 	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-126834313-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-126834313-1');
+	</script>
+
+	<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter19557328 = new Ya.Metrika({id:19557328,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+
+<link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
+
+<script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?cbk_code=e1e3d7461b692e06bc4c09ca67fd9b4f" charset="UTF-8" async=""></script>
+
+<div id="mm-blocker" class="mm-slideout"></div>
+
+</body>
+</html>
