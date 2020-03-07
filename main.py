@@ -17,8 +17,6 @@ def calc():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-	# print(request.form.get('data_quiz'))
-
 	return requests.post(
 		'https://texno-proekt.ru/templates/texno2015/new/submit/submit.php',
 		{
