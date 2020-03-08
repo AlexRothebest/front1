@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
 import requests, json
 
 
@@ -10,7 +10,6 @@ def home():
 	return render_template('index.html')
 
 
-'''
 @app.route('/calc/')
 def calc():
 	return str(json.loads(requests.get('https://texno-proekt.ru/calc/calc.php?format=json').text))
@@ -25,10 +24,10 @@ def submit():
 		}
 	).text
 
-	print(text)
+	response = Response(text)
+	response.header['Access-Control-Allow-Origin'] = '*'
 
-	return text
-'''
+	return response
 
 
 if __name__ == '__main__':

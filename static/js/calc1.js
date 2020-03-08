@@ -1,4 +1,4 @@
-var files_path = "https://texno-proekt.ru/calc/",
+var files_path = "https://texno-proekt.ru/calc",
     no_foto_img = files_path + "images/nofoto-icon.png",
     currency = "руб.";
 jQuery(function(b) {
@@ -19,7 +19,7 @@ jQuery(function(b) {
         b("#wrapper-calc").offset();
         b(window).scrollTop() > b("#wrapper-calc").offset().top && b(window).scrollTop() < b("#wrapper-calc").offset().top + c ? (b(".head-logo").addClass("hide-mobile"), b(".head-cart").addClass("hide-mobile"), b(".head-res-price").addClass("mob-show")) : (b(".head-logo").removeClass("hide-mobile"), b(".head-cart").removeClass("hide-mobile"), b(".head-res-price").removeClass("mob-show"))
     });
-    b.getJSON('http://92.53.124.39:5000/calc', {
+    b.getJSON(files_path, {
         format: "json"
     }, function(h) {
         r = h;
