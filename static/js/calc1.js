@@ -19,7 +19,7 @@ jQuery(function(b) {
         b("#wrapper-calc").offset();
         b(window).scrollTop() > b("#wrapper-calc").offset().top && b(window).scrollTop() < b("#wrapper-calc").offset().top + c ? (b(".head-logo").addClass("hide-mobile"), b(".head-cart").addClass("hide-mobile"), b(".head-res-price").addClass("mob-show")) : (b(".head-logo").removeClass("hide-mobile"), b(".head-cart").removeClass("hide-mobile"), b(".head-res-price").removeClass("mob-show"))
     });
-    b.getJSON('/calc', {
+    b.getJSON('http://92.53.124.39:5000/calc', {
         format: "json"
     }, function(h) {
         r = h;

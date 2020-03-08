@@ -10,6 +10,7 @@ def home():
 	return render_template('index.html')
 
 
+'''
 @app.route('/calc/')
 def calc():
 	return str(json.loads(requests.get('https://texno-proekt.ru/calc/calc.php?format=json').text))
@@ -17,12 +18,17 @@ def calc():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-	return requests.post(
+	text = requests.post(
 		'https://texno-proekt.ru/templates/texno2015/new/submit/submit.php',
 		{
 			'data_quiz': request.form.get('data_quiz')
 		}
 	).text
+
+	print(text)
+
+	return text
+'''
 
 
 if __name__ == '__main__':
